@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.Random;
+
 public class MainActivity extends AppCompatActivity {
 
     // Declare our View Variables
@@ -26,7 +28,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // The button was clicked, so update the fact TextView with the new fact.
-                String fact = "Ostriches can run faster than horses";
+                // Randomly select fact.
+                Random random = new Random();
+                int randomnumber = random.nextInt(3);
+
+                String fact = randomnumber + "";
                 factTextView.setText(fact);
             }
         };
