@@ -1,5 +1,6 @@
 package com.example.gurdeep.funfacts;
 
+import android.content.Context;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,5 +44,6 @@ public class MainActivity extends AppCompatActivity {
         };
 
         showFactButton.setOnClickListener(listener);
+        Toast.makeText(this, "yay! our activity is created", Toast.LENGTH_SHORT).show();
     }
 }
