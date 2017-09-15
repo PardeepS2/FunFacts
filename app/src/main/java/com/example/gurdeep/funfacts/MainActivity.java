@@ -1,12 +1,12 @@
 package com.example.gurdeep.funfacts;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
-
-import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     // Declare our View Variables
     private TextView factTextView;
     private Button   showFactButton;
+    private RelativeLayout relativeLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
 
         factTextView = (TextView) findViewById(R.id.factTtextView);
         showFactButton = (Button) findViewById(R.id.ShowFactButton);
+        relativeLayout = (RelativeLayout) findViewById(R.id.relativelayout);
 
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
@@ -32,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
                 String fact = factbook.getFact();
                 factTextView.setText(fact);
+                relativeLayout.setBackgroundColor(Color.BLUE);
             }
         };
 
