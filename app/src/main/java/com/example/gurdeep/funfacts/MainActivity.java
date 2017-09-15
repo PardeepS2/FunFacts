@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 factTextView.setText(fact);
                 int colors = colorWheel.getcolor();
                 relativeLayout.setBackgroundColor(colors);
+                showFactButton.setTextColor(colors);
             }
         };
 
