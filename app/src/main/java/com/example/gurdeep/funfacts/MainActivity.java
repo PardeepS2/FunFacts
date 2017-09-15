@@ -11,6 +11,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private factbook factbook = new factbook();
+    private ColorWheel colorWheel = new ColorWheel();
     // Declare our View Variables
     private TextView factTextView;
     private Button   showFactButton;
@@ -34,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
 
                 String fact = factbook.getFact();
                 factTextView.setText(fact);
-                relativeLayout.setBackgroundColor(Color.BLUE);
+                int colors = colorWheel.getcolor();
+                relativeLayout.setBackgroundColor(colors);
             }
         };
 
